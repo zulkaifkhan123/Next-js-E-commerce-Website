@@ -1,0 +1,342 @@
+.checkout{
+    background-color: black;
+    color: white;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+.checkout-title{
+    text-transform: uppercase;
+    font-size: 1.7vw;
+    margin-bottom: 2vw;
+    cursor: pointer;
+}
+.checkout-one{
+    width : 62% ;
+    height: 100%;
+    padding: 4vw;
+
+}
+.checkout-one .path-name{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: .5vw;
+}
+.path-name p{
+    cursor: pointer;
+    font-size: 1vw;
+}
+.path-name i{
+    cursor: pointer;
+    font-size : 1.3vw ;
+}
+.shippingAddress{
+    margin-top: 2vw;
+}
+.shippingAddress h2{
+    font-size: 1.5vw;
+    font-weight : 500 ;
+    letter-spacing: 0px;
+    margin-bottom: 2vw;
+}
+.shippingAddress form{
+    display: flex;
+    flex-direction: column;
+    gap: 0vw;
+}
+.ship-form-group{
+    display: flex;
+    gap: 1vw;
+    align-items: center;
+}
+.shippingAddress form .ship-input{
+    width: 100%;
+    height: 4vw;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.33);
+    color: white;
+    padding: 1vw;
+    font-size: 1.2vw;
+    margin-bottom: 1rem;
+    outline: none;
+    border-radius: 5px;
+}
+.ship-form-btn{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 1vw;
+}
+.ship-btn{
+    width : 35%;
+    cursor: pointer;
+    font-size: 1.1vw;
+    background-color: rgba(0, 0, 255, 0.547);
+    color: white;
+}
+.ship-btn:hover{
+    background-color: rgba(0, 0, 255, 0.747);
+    transition: all 0.3s ease-in-out;
+}
+.ship-btn:active{
+    background-color: rgba(0, 0, 255, 0.947);
+    transition: all 0.3s ease-in-out;
+}
+
+
+
+/* Payment  */
+
+
+
+#payment{
+    margin-top: 2vw;
+}
+#payment h2{
+    font-size: 1.5vw;
+    font-weight : 500 ;
+    letter-spacing: 0px;
+    margin-bottom: 2vw;
+}
+#payment-form textarea{
+    width : 100%;
+    border-radius: .5vw;
+    height: 10vw;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.33);
+    color: white;
+    font-size: 1.2vw;
+    padding: .9vw;
+}
+
+.pay-delivery{
+    margin-top: 1vw;
+    display: flex;
+    border: 1px solid rgba(255, 255, 255, 0.426);
+    align-items: center;
+    padding: 1vw 2vw;
+    gap: 1vw;
+    border-radius: .5vw;
+}
+.pay-delivery div{
+    width: 80%;
+    display : flex ;
+    flex-direction: column;
+    gap: .1vw;
+}
+.pay-delivery i{
+    font-size : 3vw ;
+}
+
+
+.pay-delivery div h4{
+    font-size: 1.3vw;
+    color: rgba(255, 255, 255, 0.846);
+    font-weight : 600 ;
+    letter-spacing: -.5px;
+}
+.pay-delivery div p{
+    font-size: 1.1vw;
+    color: rgba(255, 255, 255, 0.767);
+}
+.check-buttons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2vw;
+}
+.check-buttons button{
+    width : 35%;
+    cursor: pointer;
+    font-size: 1.1vw;
+    background-color: rgba(0, 0, 255, 0.547);
+    color: white;
+    border: none;
+    padding: 1vw 0;
+    border-radius: 2vw;
+    text-transform: uppercase;
+}
+
+/* Order  */
+
+#check-order{
+    margin-top: 2vw;
+}
+#check-order h2{
+    font-size: 1.5vw;
+    font-weight : 500 ;
+    letter-spacing: 0px;
+    margin-bottom: 1vw;
+}
+.filled-data{
+    border-radius: .5vw;
+    padding: 1vw 0vw;
+    border: 1px solid rgba(255, 255, 255, 0.208) ;
+}
+.warning{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.208) ;
+    padding: .1vw 2vw 1vw;
+    display : flex ;
+    justify-content: space-between;
+    align-items: center;
+}
+.warning #edith{
+    color: blue;
+    cursor: pointer;
+}
+.warning #edith:hover{
+    text-decoration: underline;
+}
+.show{
+    padding: 1vw 2vw;
+}
+.show-group strong{
+    font-size: 1.3vw;
+    font-weight: 500;
+}
+.show-data{
+    margin-top: .5vw;
+    display: flex;
+    justify-content : space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: .5vw;
+}
+.show-data p{
+    color: rgba(255, 255, 255, 0.773);
+}
+.show-data p span{
+    color: white;
+}
+
+
+.second-group{
+    margin-top: 1vw;
+}
+.order-button{
+    display: flex;
+    justify-content: center;
+    margin-top: 1vw;
+}
+#order-now{
+    width : 40%;
+    cursor: pointer;
+    font-size: 1.1vw;
+    background-color: rgba(0, 128, 0, 0.701);
+    color: white;
+    border: none;
+    padding: 1vw 0;
+    border-radius: 2vw;
+    text-transform: uppercase;
+}
+#order-now:hover{
+    background-color:green;
+}
+#order-now:active{
+    background-color: rgb(19, 192, 19);
+}
+
+
+
+
+
+.checkout-two{
+    border-left: 1px solid rgba(255, 255, 255, 0.145) ;
+    width : 38% ;
+    height: 100%;
+    color : white ;
+    padding: 4vw;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.checkout-two .checkout-product{
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    margin-bottom: 2vw;
+    padding-bottom: 9vw;
+}
+
+.checkout-two .checkout-product .check-pro-one {
+    display: flex;
+    gap : 1vw ;
+    padding-top: 1vw;
+    position: relative;
+}
+.checkout-product-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: .1vw;
+}
+.checkout-product-details h2{
+    font-size: 1.2vw;
+    color: rgba(255, 255, 255, 0.846);
+    font-weight : 500 ;
+    letter-spacing: -.5px;
+}
+.rape-check{
+    display : flex ;
+    justify-content : space-between ;
+    align-items : center ;
+    width : 20vw ;
+}
+#check-color{
+    color : rgba(255, 255, 255, 0.713) ;
+    font-size : 1vw ;
+}
+.checkout-two .checkout-product .check-pro-one img{
+    width: 4.5vw;
+    height : 4.5vw ;
+    border-radius: .5vw;
+    object-fit: cover;
+    background-color : gray;
+}
+.trash{
+    position: absolute;
+    bottom: .6vw;
+    right: 5vw; color : red ;
+    font-size: 1.4vw;
+    cursor: pointer;
+}
+#check-quantity{
+    position : absolute ;
+    top :.2vw ;
+    font-weight: 600;
+    font-size : 1.3vw ;
+    background-color : rgba(255, 255, 255, 0.651) ;
+    color : black ;
+    left : 3.5vw ;
+    border-radius: 1vw;
+    padding : 0vw .5vw ;
+}
+.checkout-two .subtotal{
+    width : 100% ;
+    margin-top: .5vw;
+    display : flex ;
+    justify-content : space-between;
+    align-items : center ;
+}
+#p-one{
+    color : rgba(255, 255, 255, 0.698) ;
+}
+.check-total-pay{
+    font-size : 1.5vw ;
+    font-weight: 600;
+}
+.rape-last-checkout{
+    position : absolute ;
+    bottom : 0 ;
+    right : 2vw ;
+    width : 35vw;
+    height : 13vw ;
+    background-color : rgba(0, 0, 0, 0.963);
+    padding: 2vw 4vw;
+}

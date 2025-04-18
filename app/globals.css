@@ -1,26 +1,675 @@
-@import "tailwindcss";
+/* @import "tailwindcss"; */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+*{
+  margin: 0%; padding: 0%;
+  box-sizing : border-box;
+  font-family: "Nunito Sans", sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+   #slider{
+    display : flex ;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1vw;
+    margin-top: 5vw;
+    align-items: center;
+   }
+   #slider h1{
+    font-size: 7vw;
+    text-align: center;
+    line-height: 7vw;
+    word-spacing: -3px;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: -1px;
+   }
+   
+   #slider p{
+    text-align: center;
+    width : 70% ;
+    color: rgba(0, 0, 0, 0.677);
+    line-height: 2.4vw;
+    font-size : 1.9vw ;
+    text-transform: normal;
+    letter-spacing: -.5px;
+   }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+   #slider button{
+    padding: .8vw 2vw;
+    border-radius: 2vw;
+    background-color: rgba(0, 0, 255, 0.761);
+    color: white;
+    font-size: 1.4vw;
+    cursor: pointer;
+    border: none;
+    cursor: pointer;
+   }
+    #slider button:hover{
+      background-color: blue;
+    }
+    #slider button:active{
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.168);
+    }
+    #slider button:focus{
+      outline: none;
+    }
+
+  /* featched Products  */
+
+
+
+   
+
+  .featuredSection {
+    width: 100%;
+    padding: 1vw 4vw;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin-top: 4vw;
+    
   }
+  
+
+
+  #featuredSection-title{
+    font-size: 2.5vw;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: -1.5px;
+  }
+  .Products{
+    display: flex;
+    gap: 1vw;
+    flex-wrap:wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2vw;
+  }
+  .product{
+    position: relative;
+    overflow: hidden;
+    width: 40vw;
+
+    height: 40vh;
+    border-radius: 1vw;
+    border: 1px solid rgba(128, 128, 128, 0.166);
+    margin : 0vw ;
+  }
+  .product:hover{
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 255, 0.493);
+  }
+  .product img{
+    width: 100%;
+    object-fit: contain;
+    height: 100%;
+    scale : .9 ;
+    transition: all .3s ease-in;
+  }
+  .product:hover .product-image{
+    scale: 1;
+  }
+
+  #product-detail{
+    position: absolute;
+    bottom: 1vw;
+    height: 2vw;
+    left: 1vw;
+    padding: 1.5vw .5vw 1.5vw 1vw;
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.653);
+    border-radius: 2vw;
+    border: 1px solid rgba(128, 128, 128, 0.132);
+  }
+  #product-detail p{
+    font-size: 1.2vw;
+    letter-spacing: -.5px;
+    font-weight: 700;
+  }
+  #product-detail span{
+    background-color: blue;
+    padding: .3vw 1.5vw;
+    margin-left: .5vw;
+    font-size: 1.3vw;
+    font-weight: 600;
+    border-radius: 3vw;
+    color: white;
+  }
+  .btn{
+    display: flex;
+    justify-content: center;
+
+  }
+
+  #see-products-btn{
+    margin: 2vw auto; cursor: pointer;
+    border-radius: .3vw;
+    font-size: 1.1vw;
+    background-color: white;
+    padding: .5vw 1vw;
+    border: 1px solid rgba(128, 128, 128, 0.647);
+  }
+  #see-products-btn:hover{
+    border: 1px solid rgba(0, 0, 255, 0.575);
+  }
+  #see-products-btn:active{
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.168);
+  }
+
+
+  /* nested card  */
+
+
+  
+  .backBtn{
+    padding: 1vw 5vw;
+  }
+  #back i{
+    font-size: 1.5vw;
+  }
+  #back{
+    display: flex;
+    gap: 1vw;
+    align-items: center;
+    font-size: 1.3vw;
+    width: 15vw; cursor: pointer;
+    padding: .5vw 1vw;
+    background-color: white;
+    border: none;
+    border-radius: 2vw;
+  }
+  #back:hover{
+    background-color: whitesmoke;
+  }
+  #nested-card{
+    padding: 0vw 5vw;
+    display: flex;
+    background-color: white;
+  }
+  .nested-image{
+    width: 60%;
+    object-fit: contain;
+    height: 77vh;
+  }  
+  #rape-nested-details h2{
+    font-size: 3vw;
+    text-transform: capitalize;
+  }
+  #rape-nested-details{
+    padding-top: 1vw;
+    margin-left: 2vw;
+  }
+  #nested-price{
+    margin-top: .5vw;
+    font-size: 1.3vw;
+    background-color: blue;
+    letter-spacing: -1px;
+    width: min-content;
+    font-weight: 800;
+    padding: .5vw 2vw;
+    border-radius: 2vw;
+    color : rgba(255, 255, 255, 0.87);
+  }
+
+  #nested-adjective{
+    margin-top: 2vw;
+    text-transform: capitalize;
+    font-size: 1.2vw;
+  }
+  .color{
+    padding-top: 1vw;
+    width: 30vw;
+    margin-top: 1vw;
+    border-top: 1px solid rgba(122, 121, 121, 0.322);
+  }
+  #colors{
+    font-size: 1.2vw;
+    text-transform: uppercase;
+  }
+  .color .rape-span{
+    display: flex;
+    align-items: center;
+    margin-top: 1vw;
+    gap: .5vw;
+  }
+  
+  .rape-span button{
+    cursor: pointer;
+    padding : .6vw 2vw ;
+    background-color: whitesmoke;
+    border: 1px solid rgba(128, 128, 128, 0.373);
+    border-radius: 2vw;
+  }
+  #black:hover{
+    background-color: black;
+    color : white
+  }
+  #blue:hover{
+    background-color: blue;
+    color : white ;
+  }
+  #white:hover{
+    background-color: white;
+    color: black;
+  }
+  #add-cart{
+    margin-top: 2.1vw;
+    padding: 1vw 2vw;
+    border-radius: 2vw;
+    background-color: blue;
+    color: white;
+    width: 100%; cursor: pointer;
+    border: none;
+    font-size: 1.2vw;
+  }
+  .black {
+    background-color: rgba(0, 0, 0, 0.49);
+    color : black;
+  }
+  
+  .blue {
+    background-color: rgba(0, 0, 255, 0.485);
+    color : blac;
+  }
+  
+  .white {
+    background-color: rgba(255, 255, 255, 0.476);
+    color: rgba(0, 0, 0, 0.738);
+  }
+  
+  .black.activeColor {
+    background-color: black;
+    color: white;
+  }
+  
+  .blue.activeColor {
+    background-color: blue;
+    color: white;
+  }
+  
+  .white.activeColor {
+    background-color: white;
+    color: black;
+  }
+  
+  
+  .related .product{
+    width : 22vw ;
+  }
+  .related .Products{
+    flex-wrap: nowrap;
+  }
+  .related h2{
+    font-size : 2.2vw ;
+    font-weight: 500;
+    letter-spacing: -1px;
+    margin-left: 4.5vw;
+  }
+
+
+  /* PRODUCTS  */
+
+  
+
+
+  #products-page{
+    display : flex; 
+    justify-content: space-between;
+    position: relative;
+    /* height: 350vh; */
+    padding: 2vw 1vw;
+    overflow: auto;
+  }
+  .collection{
+    width: 10vw;
+    position: sticky;
+    top: 20vw;
+    display: flex;
+    z-index: 10;
+    flex-direction: column;
+    gap: .8vw;
+  }
+  .collection p{
+    font-size: 1.1vw;
+    width: min-content;
+    cursor: pointer;
+    font-weight: 500;
+    letter-spacing: -.3px;
+    border-bottom: 1px solid transparent;
+  }
+  .collection p:hover{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.358);
+  }
+  #col{
+    font-size: 1.1vw;
+    font-weight: 800;
+    color: rgba(0, 0, 0, 0.716);
+  }
+  .allProducts{
+    display: flex;
+    justify-content: center;
+    gap: 1vw;
+    width: 85vw;
+    flex-wrap: wrap;
+    padding: 0vw .5vw;
+  }
+  .product-page-pro{
+    height: 24vw;
+    width: 23vw;
+  }
+  .sorting{
+    display: flex;
+    flex-direction: column;
+    gap: .5vw;
+    width: 10vw !important;
+    width: max-content;
+  }
+
+  .sorting p{
+    cursor: pointer;
+    font-size: 1.1vw;
+    border-bottom: 1px solid transparent;
+  }
+  .sorting p:hover{
+    text-decoration: underline;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* Check OUt  */
+
+
+
+
+
+  .checkout-container{
+    width : 100vw ;
+    z-index: 100;
+    height : 100vh ;
+    position : fixed;
+    overflow-y: auto;
+    top: 0vw;
+    left: 0vw;
+    padding-bottom: 14vw;
+    background-color: black;
+    color: white;
+  }
+
+
+
+
+
+  .product{
+    margin : 0vw ;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* COntact page :  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+section{
+  padding: 3vw 7vw;
+  display: flex;
+  align-items: start;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.cont-side1 h1{
+  font-size: 3vw;
+  font-weight: 500;
+  letter-spacing: -2px;
+  line-height: 3.3vw;
+}
+.cont-side1 h2{
+  font-size: 2.6vw;
+  line-height: 2.6vw;
+  font-weight: 500;
+}
+section .cont-side1{
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+}
+.cont-side1 p{
+  font-size: 1.3vw;
+  width: 97%;
+  letter-spacing: -.5px;
+}
+.cont-sides>div>.icon{
+  color: black;
+}
+.call{
+  margin-top: 2vw;
+}
+.foot-contact{
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+}
+.foot-contact i{
+  font-size : 1.6vw ;
+}
+
+/* .cont-side2 */
+section .cont-side2{
+  width: 60%;
+  padding: 0vw 3vw;
+}
+.cont-side2 form{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: .5vw;
+}
+form div{
+  display: flex;
+  gap: .5vw;
+  justify-content: center;
+}
+.input{
+  padding: 1vw 2vw;
+  width: 50%;
+  border-radius: .1vw;
+  font-size: 1.3vw;
+  border: .1vw solid rgba(0, 0, 0, 0.252);
+  background-color: white;
+}
+.input:focus{
+  outline: none;
+  border-color: blue;
+}
+form textarea{
+  width: 100%;
+  height: 20vw;
+  background-color: white;
+  resize: none;
+  border: .1vw solid rgba(0, 0, 0, 0.252);
+  padding: 1vw 2vw;
+  font-size: 1.3vw;
+}
+form textarea:focus{
+  outline: none;
+  border-color: blue;
+}
+form button{
+  text-transform: uppercase;
+  padding: 1vw 2vw ;
+  border: none;
+  background-color: rgba(0, 128, 0, 0.848);
+  border-radius: 2vw;
+  color: white;
+  width: 30%;
+  font-size: 1.2vw;
+  
+}
+#form-contact button{
+  padding: .8vw 2vw;
+  border-radius: 2vw;
+  background-color: rgba(0, 0, 255, 0.761);
+  color: white;
+  font-size: 1.2vw;
+  cursor: pointer;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+ }
+  #form-contact button:hover{
+    background-color: blue;
+  }
+  #form-contact button:active{
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.168);
+  }
+  #form-contact button:focus{
+    outline: none;
+  }
+
+@media (max-width : 1024px) {
+  *{
+      box-sizing: border-box;
+  }
+  section{
+      margin-top: 3vw;
+      flex-direction: column;
+      align-items: center;
+  }
+  section>.cont-sides>h1{
+      font-size: 6vw;
+      display: block;
+      line-height: 6vw;
+  }
+  section>.cont-sides{
+      width: 100vw;
+      margin-top: 2vw;
+      padding: 0vw 5vw;
+  }
+  section>.cont-sides>h2{
+      font-size: 4.5vw;
+      margin-bottom: 2vw;
+      line-height: 4.5vw;
+  }
+  .cont-side1 p{
+      font-size: 2.8vw;
+  }
+  .cont-sides>div>.icon{
+      font-size: 3.4vw;
+  }
+  section .cont-side2{
+      margin-top: 5vw;
+  }
+  form div{
+      gap: 2vw;
+  }
+  input{
+      height: 8vw;
+      font-size: 2.8vw;
+      outline: none;
+      margin-bottom: 2vw;
+      border-color: black;
+  }
+  form textarea{
+      height: 40vw;
+      font-size: 2.8vw;
+      outline: none;
+      padding-top: 2vw;
+  }
+  form #submit{
+      margin-top: 3vw;
+      font-size:2.8vw;
+      text-transform: uppercase;
+      border-radius: 5vw;
+  }
+
+}
+@media (max-width : 760px) {
+  section{
+      padding-top: 0%;
+  }
+  section .cont-side1 h1{
+      font-size: 8vw;
+      line-height: 8vw;
+  }
+  section .cont-side1 h2{
+      font-size: 6vw;
+      line-height: 6vw;
+      margin-top: 2vw;
+  }
+  section .cont-side1 p{
+      font-size: 4vw;
+      width: 100%;
+  }
+  section .cont-side1 .foot-contact>i{
+      font-size: 6vw;
+  }
+  section .cont-side1 .foot-contact{
+      display: flex;
+      gap: 3vw;
+  }
+  .cont-side2 form{
+      display: flex;
+      flex-direction: column;
+  }
+  .cont-side2 form div{
+      display: flex;
+      flex-direction: column;
+  }
+  .cont-side2 form div>input{
+      width: 100%;
+      height: 15vw;
+      border: 1px solid black;
+      font-size: 4vw;
+  }
+  .cont-side2 form textarea{
+      font-size: 4vw;
+      border: 1px solid black;
+  }
+  .cont-side2 form #submit{
+      font-size: 4.5vw;
+      height: 15vw;
+      width: 70vw;
+      border-radius: 8vw;
+  }
+  
 }
