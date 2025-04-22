@@ -1,3 +1,24 @@
+.signOut , .signIn{
+    background-color: rgba(0, 0, 255, 0.563);
+    color : white ;
+    border : none ;
+    border-radius : 2vw ;
+    font-size : 1.2vw ;
+    cursor: pointer;
+    padding: .7vw 1vw;
+}
+
+.signIn:hover , .signOut:hover{
+    background-color: blue;
+    color : white ;
+}
+.signIn:active , .signOut:active{
+    background-color: rgba(0, 0, 255, 0.78);
+    color : white ;
+}
+
+
+
 /* styles/navbar.css */
 
 .navbar {
@@ -20,9 +41,8 @@
   .navbar-logo {
     font-size: 1.8vw;
     font-weight: 800;
-    text-transform: uppercase;
     color: black;
-    font-weight: 500;
+    font-weight: 700;
     text-decoration: none;
     letter-spacing: -0.5px;
   }
@@ -537,7 +557,7 @@
     color: rgba(0, 0, 0, 0.74);
     font-size: 1.1vw;
   }
-  #checkout-btn{
+  .checkout-btn{
     width: 100%;
     padding: .8vw 1vw;
     background-color: rgba(0, 0, 255, 0.502);
@@ -548,13 +568,16 @@
     border-radius: 2vw;
     color: white;
   }
-  #checkout-btn:hover{
+  .checkout-btn:hover{
     background-color: rgba(0, 0, 255, 0.798);
   }
-  #checkout-btn:active{
+  .checkout-btn:active{
     background-color: blue;
   }
-
+  .checkout-btn.disabled{
+    background-color: rgba(0, 0, 255, 0.502);
+    cursor: not-allowed;
+  }
 
 
 

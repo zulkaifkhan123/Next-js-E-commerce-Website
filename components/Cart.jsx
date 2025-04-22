@@ -94,7 +94,7 @@ function Cart() {
           </p>
         </div>
       </div>
-      <button id="checkout-btn" onClick={checkoutPage}>
+      <button className={`checkout-btn , ${state.length == 0 ? "disabled" : "not"}`} disabled={(state.length == 0) ? true : false} id="checkout-btn" onClick={checkoutPage}>
         {isPending ? "Loading..." : "Proceed to checkout"}
       </button>
     </div>

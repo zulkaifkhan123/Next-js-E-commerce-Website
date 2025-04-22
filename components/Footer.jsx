@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="footer-content">
           <div className="footer-brand">
             <Link href="/" className="footer-logo">
-              BuyNest
+            VogueBay
             </Link>
             <p className="footer-tagline">Your one-stop online shopping destination</p>
             <div className="footer-social">

@@ -43,9 +43,7 @@ function Checkout() {
   useEffect(() => {
     if (state.length === 0) {
       router.push("/");
-      alert("Please add items to cart before checkout");
     }
-
     const items = Products.filter((item) => state.includes(item.name));
     setCartItems(items);
     console.log("cartItems for checkout:", items);
@@ -63,7 +61,7 @@ function Checkout() {
   return (
     <div className="checkout">
       <div className="checkout-one">
-        <h1 onClick={() => router.push("/")} className="checkout-title">BuyNest</h1>
+        <h1 onClick={() => router.push("/")} className="checkout-title">VogueBay</h1>
         <div className="path-name">
           <p id="Pinformation" onClick={handlePath}>Information</p>
           <i className="ri-arrow-right-s-line"></i>

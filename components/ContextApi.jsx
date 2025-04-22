@@ -14,7 +14,7 @@ function ContextApi({children}) {
       pin : "" , 
       address : "" , 
       phone : "" ,
-      message : ""
+      message : "" 
     })
     const [state , setState] = useState([]);
     const [cartOpen , setCartOpen] = useState(false)
@@ -33,7 +33,7 @@ function ContextApi({children}) {
     };
 
   return (
-    <MyContext.Provider value={{state , color , counts, setCounts, setColor, addtoCart, cartOpen , setCartOpen , removeFromCart ,page , setPage , checkout , setCheckout}}>
+    <MyContext.Provider value={{state , setState , setCheckout , color , counts, setCounts, setColor, addtoCart, cartOpen , setCartOpen , removeFromCart ,page , setPage , checkout , setCheckout}}>
         {children}
     </MyContext.Provider>
   )

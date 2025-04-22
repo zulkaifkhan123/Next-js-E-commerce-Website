@@ -12,9 +12,16 @@ function Contact() {
       [name] : value
     }))
   }
-  function handleSubmit (e) {
+  async function handleSubmit (e) {
     e.preventDefault()
     console.log(state)
+    await fetch("/api/send-email", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(state)
+    })
     setState({ name: "", email: "", phone: "", subject: "", message: "" })
   }
 

@@ -1,12 +1,50 @@
-
 import React , {useContext} from 'react'
 import { MyContext } from './ContextApi'
+import { useRouter } from 'next/navigation';
 
 
 
 function Order() {
-  const {setPage , checkout} = useContext(MyContext);
+
+
+
+  let router = useRouter();
+  const {setPage , checkout , color , counts , state , setCheckout , setState} = useContext(MyContext);
   
+  
+  async function orderPassed() {
+    console.log("counts : " , counts);
+    try {
+      const res = await fetch("/api/order", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          ...checkout,
+          products :  state ,
+          quantity : counts ,
+          colors : color 
+        }),
+      });
+      const data = await res.json(); 
+      if (res.ok) {
+        alert("Order Passed Successfully!");
+        setPage('shipping')
+        setState([]);
+        setCheckout({Fname: "",email: "",Lname: "",country: "",city: "",pin: "",address: "",phone: "",message: "",
+        });
+        router.push("/"); 
+      } else {
+        alert(`Failed to pass order: ${data.error || "Unknown error"}`);
+      }
+    } catch (error) {
+      alert(`Error: ${error.message}`);
+    }
+  }
+  
+
+
   return (
     <div id='check-order'>
       <h2>Shoping Order</h2>
@@ -31,14 +69,14 @@ function Order() {
           <div className="show-group second-group">
             <strong>Delivery Note</strong>
             <div className="show-data noted-data">
-              <p>{checkout.message}</p>
+              <p>{checkout.message.slice(0, 170) + '...'}</p>
             </div>
           </div>
         </div>
       </div>
 
       <div className="order-button">
-      <button id='order-now'>Order Now </button>
+      <button id='order-now' onClick={orderPassed}>Order Now </button>
       </div>
     </div>
   )
